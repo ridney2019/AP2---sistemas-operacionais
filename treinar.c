@@ -7,7 +7,7 @@ int main(){
 int carro, *carros;
 int  id_mem_comum;
 
-if ((id_mem_comum=shmget(300, 3*sizeof(int),0666)) ==-1) {
+if ((id_mem_comum=shmget(456, 3*sizeof(int),0666)) ==-1) {
         perror("Erro no shmget") ;
         exit(0);
 }
@@ -15,9 +15,6 @@ if ((id_mem_comum=shmget(300, 3*sizeof(int),0666)) ==-1) {
 int sem = alocaSem(100);
 
 carros = shmat(id_mem_comum, 0, 0);
-
-
-
 
 printf("\nDigite o número do carro para treinar:");
 scanf("%d", &carro);

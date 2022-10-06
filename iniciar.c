@@ -16,7 +16,7 @@ int main(){
         }
 
     	/* */
-        if ((id_mem_comum=shmget(300, 3*sizeof(int), IPC_CREAT|IPC_EXCL|0666)) ==-1) {
+        if ((id_mem_comum=shmget(456, 3*sizeof(int), IPC_CREAT|IPC_EXCL|0666)) ==-1) {
             perror("Erro no shmget");
             exit(0);
         }

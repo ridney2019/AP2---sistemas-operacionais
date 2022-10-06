@@ -6,7 +6,7 @@ int main(){
 	int *num, id_mem;  /* identificador da memória comum */
 
 	 //Se liga a uma área de memória compartilhada existente
-	 if ((id_mem = shmget(300, 3*sizeof(int), 0666)) == -1) {
+	 if ((id_mem = shmget(456, 3*sizeof(int), 0666)) == -1) {
 		  perror("Erro no shmget") ;
 		  exit(0) ;
 	 }
@@ -19,6 +19,4 @@ int main(){
     printf("Treinos Carro 2: %d\n",*(num + 1)); //p[1]
     printf("Treinos Carro 3: %d\n",*(num + 2)); //p[1]
     V(sem);
-
-	shmctl(id_mem, IPC_RMID, NULL);
 }
